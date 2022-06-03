@@ -1,5 +1,5 @@
 #include <iostream>
-#define MAX 10 //maksimum data queue(antrian)
+#define MAX 100 //Nilai maksimum data Queue(antrian)
 using namespace std;
 
 struct Queue {
@@ -9,12 +9,12 @@ struct Queue {
 }
 Q;
 
-//antrian penuh
+//Kondisi Queue(antrian) penuh
 bool isFull() {
 	return Q.tail == MAX;
 }
 
-//antrian kosong
+//Kondisi Queue(antrian) kosong
 bool isEmpty() {
 	return Q.tail == 0;
 }
@@ -32,7 +32,7 @@ void printQueue() {
   }
 }
 
-//manambahkan data ke antrian
+//Manambahkan data ke Queue(antrian)
 void enqueue() {
 	if (isFull())
 	{
@@ -67,12 +67,11 @@ int main() {
 	int choose;
 	do
 	{
-		cout << "-------QUEUE (ANTRIAN)----------\n"
+		cout << "QUEUE (ANTRIAN)\n"
 			<< "---------------------------------\n"
-			<< " 1. Menambahkan Data Ke Antrian \n"
-			<< " 2. Mengambil Data Dari Antrian \n"
-			<< " 3. EXIT \n\n"
-			<< "----------------------------------\n"
+			<< " 1. Menambahkan Data \n"
+			<< " 2. Mengambil/menghapus Data \n"
+			<< " 3. Keluar \n\n"
 			<< "Masukkan pilihan : "; cin >> choose;
 		switch (choose)
 		{
